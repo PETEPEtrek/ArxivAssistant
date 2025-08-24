@@ -42,6 +42,8 @@
 ## Использование
 
 <img width="1280" height="725" alt="image" src="https://github.com/user-attachments/assets/8885df29-a4e0-4ccf-8ed0-39f56d3691c2" />
+
+
 # На главной странице можно:
 
 1. Скачать собственный pdf файл со статьей и работать непосредственно с ней
