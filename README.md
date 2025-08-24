@@ -6,7 +6,7 @@
 
 1. **Клонируйте репозиторий:**
    ```bash
-   git clone <repository-url>
+   git clone [<repository-url>](https://github.com/PETEPEtrek/ArxivAssistant.git)
    cd ArxivAssistant
    ```
 2. **Активируйте окружение conda (хотя бы python=3.9)**
