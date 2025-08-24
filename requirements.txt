@@ -1,0 +1,27 @@
+streamlit>=1.28.0
+requests>=2.31.0
+feedparser>=6.0.0
+
+# RAG dependencies (совместимые с Python 3.12)
+faiss-cpu>=1.8.0
+sentence-transformers>=2.7.0
+langchain>=0.2.0
+langchain-text-splitters>=0.2.0
+PyPDF2>=3.0.0
+numpy>=1.26.0
+
+# Alternative для arxiv2text если недоступен
+PyMuPDF>=1.23.0
+pdfplumber>=0.10.0
+
+# LLM dependencies
+openai>=1.0.0
+ollama>=0.1.0
+python-dotenv>=1.0.0
+
+# Hybrid search dependencies
+rank-bm25>=0.2.2
+
+# Visual PDF analysis
+pymupdf>=1.23.0  # For font and formatting analysis
+pdfplumber>=0.10.0  # Alternative for visual structure
