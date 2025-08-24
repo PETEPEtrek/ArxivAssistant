@@ -8,11 +8,11 @@ import logging
 import os
 from datetime import datetime
 
-from .styles import get_article_card_style
+from ui.styles import get_article_card_style
 from paper_rag.async_processor import async_processor
 from paper_rag.embeddings import embedding_manager
-from .summary import summarize_paper_by_sections
-from .dialogue_manager import article_dialogue_manager
+from ui.summary import summarize_paper_by_sections
+from ui.dialogue_manager import article_dialogue_manager
 from paper_rag.pdf_processor import PDFProcessor
 from paper_rag.chunking import TextChunker
 from paper_rag.embeddings import embedding_manager
@@ -798,7 +798,7 @@ class UIComponents:
             if st.button("🚀 Обработать PDF", type="primary", use_container_width=True):
                 with st.spinner("🔍 Обработка PDF файла..."):
                     try:
-                        from .pdf_uploader import pdf_uploader
+                        from ui.pdf_uploader import pdf_uploader
                         
                         # Обрабатываем загруженный файл
                         article_info = pdf_uploader.process_uploaded_pdf(uploaded_file)
@@ -846,7 +846,7 @@ class UIComponents:
             Выбранная статья или None
         """
         try:
-            from .pdf_uploader import pdf_uploader
+            from ui.pdf_uploader import pdf_uploader
             
             # Получаем список загруженных статей
             uploaded_articles = pdf_uploader.get_uploaded_articles()

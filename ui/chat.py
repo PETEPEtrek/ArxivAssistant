@@ -8,7 +8,7 @@ import logging
 from paper_rag import rag_pipeline
 from paper_rag.async_processor import async_processor
 from llm_models import llm_factory, get_best_available_model
-from .dialogue_manager import article_dialogue_manager
+from ui.dialogue_manager import article_dialogue_manager
 from paper_rag.embeddings import embedding_manager
 
 logger = logging.getLogger(__name__)

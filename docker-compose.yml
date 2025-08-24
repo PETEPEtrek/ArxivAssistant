@@ -6,7 +6,7 @@ services:
     ports:
       - "8501:8501"
     environment:
-      - PYTHONPATH=/app
+      - PYTHONPATH=/app:/app/ui
       - STREAMLIT_SERVER_PORT=8501
       - STREAMLIT_SERVER_ADDRESS=0.0.0.0
       - DOCKER_ENV=true  # Указываем что запущены в Docker
@@ -29,10 +29,10 @@ services:
     deploy:
       resources:
         limits:
-          memory: 4G
+          memory: 6G
           cpus: '2.0'
         reservations:
-          memory: 2G
+          memory: 3G
           cpus: '1.0'
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:8501/_stcore/health"]
@@ -51,9 +51,10 @@ services:
     environment:
       - OLLAMA_HOST=0.0.0.0
       - OLLAMA_ORIGINS=*
-      - OLLAMA_NUM_PARALLEL=4
+      - OLLAMA_NUM_PARALLEL=2
       - OLLAMA_GPU_LAYERS=0
       - OLLAMA_CPU_ONLY=true
+      - OLLAMA_MODEL_MEMORY=8GB
       - DOCKER_ENV=true  # Указываем что запущены в Docker
     networks:
       - arxiv-network
@@ -61,10 +62,10 @@ services:
     deploy:
       resources:
         limits:
-          memory: 8G
+          memory: 12G
           cpus: '4.0'
         reservations:
-          memory: 4G
+          memory: 8G
           cpus: '2.0'
     healthcheck:
       test: ["CMD", "curl", "-f", "http://ollama:11434/api/tags"]  # Используем имя сервиса

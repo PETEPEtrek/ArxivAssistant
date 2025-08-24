@@ -8,7 +8,7 @@ from collections import defaultdict
 import time
 
 from paper_rag.embeddings import embedding_manager
-from .chat import chat_manager
+from ui.chat import chat_manager
 
 logger = logging.getLogger(__name__)
 

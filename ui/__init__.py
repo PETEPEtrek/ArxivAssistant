@@ -2,10 +2,10 @@
 UI пакет для ArXiv Assistant
 """
 
-from .arxiv_api import arxiv_api
-from .chat import chat_manager
-from .components import ui_components
-from .styles import apply_custom_styles
+from ui.arxiv_api import arxiv_api
+from ui.chat import chat_manager
+from ui.components import ui_components
+from ui.styles import apply_custom_styles
 
 __all__ = [
     'arxiv_api',
